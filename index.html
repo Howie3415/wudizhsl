@@ -82,7 +82,7 @@
 </div>
 
 <div id="loadingImg" style="top:45%;width: 100%;position:absolute; ">
-    <img src="res/loading.gif" width="25%" height="25%" />
+    <img src="res/loading.gif" width="70%" height="70%" />
 </div>
 
 <!-- 判断浏览器是否屏蔽广告 -->
@@ -131,7 +131,7 @@
         } else if (window.navigator.language == "th-TH") {
             document.title = "เรียกมังกร";
         } else {
-            document.title = "召唤被已飞扬驯服的神龙";
+            document.title = "召唤已被飞扬驯服的神龙";
         }
     }
 
@@ -172,7 +172,7 @@
                 return;
             }
 
-            loadintT.innerHTML = 'loading......' + parseInt(tempSeconds) + '%';
+            loadintT.innerHTML = '飞扬驯服神龙中......' + parseInt(tempSeconds) + '%';
 
             switch (tempSeconds) {
                 case 20:
@@ -205,7 +205,7 @@
             if (tempSeconds > 100) {
                 clearInterval(timer);
                 tempSeconds = 100
-                loadintT.innerHTML = 'loading......' + parseInt(tempSeconds) + '%';
+                loadintT.innerHTML = '飞扬驯服神龙中......' + parseInt(tempSeconds) + '%';
             }
         }, t * 1000);
     }
@@ -219,7 +219,7 @@
 
     function finishLoad() {
         clearInterval(timer);
-        loadintT.innerHTML = 'loading......100' + '%';
+        loadintT.innerHTML = '飞扬驯服神龙中......100' + '%';
         setTimeout(function() {
             loadintT.remove();
         }, 0.1 * 1000);
